@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour {
+public class ShapeController : MonoBehaviour {
 
-    ShapeController _shapeController;
+
 
 	// Use this for initialization
 	void Start () {
@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour {
 	
 	}
 
-    private void FixedUpdate()
+    public virtual void FormUpdate()
     {
-        
+
     }
 }
