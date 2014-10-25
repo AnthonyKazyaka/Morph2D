@@ -1,13 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SphereController : MonoBehaviour {
+public class SphereController : ShapeController {
 
     public float maxRotationalSpeed = 500.0f;
 
-    private void Awake()
+    
+
+    public void InitializeForm(GameObject playerObject)
     {
-        gameObject.rigidbody.maxAngularVelocity = maxRotationalSpeed;
+
+
+        //gameObject.rigidbody.maxAngularVelocity = maxRotationalSpeed;
     }
 
 	// Use this for initialization
@@ -22,15 +26,12 @@ public class SphereController : MonoBehaviour {
         //Quaternion newRotation = Quaternion.Euler(gameObject.rigidbody.rotation.eulerAngles + new Vector3(0.0f, 0.0f, maxRotationalSpeed) * Time.deltaTime);
 
         //gameObject.rigidbody.MoveRotation(newRotation);
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            gameObject.rigidbody.AddForce(0.0f, 100.0f, 0.0f, ForceMode.Force);
-        }
+        
 
 	}
 
     public override void FormUpdate()
     {
-        gameObject.rigidbody.AddRelativeTorque(0.0f, 0.0f, maxRotationalSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, ForceMode.Acceleration);
+        //gameObject.rigidbody.AddRelativeTorque(0.0f, 0.0f, maxRotationalSpeed * Input.GetAxis("Horizontal") * Time.deltaTime, ForceMode.Acceleration);
     }
 }

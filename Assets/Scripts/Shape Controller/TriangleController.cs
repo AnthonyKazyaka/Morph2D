@@ -12,4 +12,9 @@ public class TriangleController : MonoBehaviour {
 	void Update () {
 	
 	}
+
+    //if (Input.GetKeyDown(KeyCode.Space))
+    //{
+    //    gameObject.rigidbody.AddForce(0.0f, 100.0f, 0.0f, ForceMode.Force);
+    //}
 }

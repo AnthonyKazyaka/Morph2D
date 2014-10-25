@@ -1,19 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShapeController : MonoBehaviour {
+public class ShapeController 
+{
 
+    protected GameObject _shapeGameObject;
 
+    public virtual void GetModel()
+    {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    }
 
     public virtual void FormUpdate()
     {
