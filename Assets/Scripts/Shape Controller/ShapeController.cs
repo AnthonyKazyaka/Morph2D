@@ -1,11 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShapeController 
+public class ShapeController : MonoBehaviour
 {
 
     protected GameObject _shapeGameObject;
 
+    public virtual void InitializeForm(Transform transform)
+    {
+
+    }
+
+    public virtual void DisableForm()
+    { 
+    
+    }
     public virtual void GetModel()
     {
 
@@ -15,4 +24,5 @@ public class ShapeController
     {
 
     }
+
 }

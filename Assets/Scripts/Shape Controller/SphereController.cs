@@ -5,9 +5,9 @@ public class SphereController : ShapeController {
 
     public float maxRotationalSpeed = 500.0f;
 
-    
+    public GameObject Sphere { get { return _shapeGameObject; } set { _shapeGameObject = value; } }
 
-    public void InitializeForm(GameObject playerObject)
+    public void InitializeForm(Transform transform)
     {
 
 

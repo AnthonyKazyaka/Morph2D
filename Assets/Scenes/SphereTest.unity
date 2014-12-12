@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abb6c960d76bdd44b56383f557cc3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentShape: 0
 --- !u!4 &1330079859
 Transform:
   m_ObjectHideFlags: 0
@@ -517,7 +518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cfa3c062f6d77949bc3da3c3fbf4c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxRotationalSpeed: 50
 --- !u!54 &1661850030
 Rigidbody:
   m_ObjectHideFlags: 0
