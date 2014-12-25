@@ -3,21 +3,16 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
-    private ShapeController _shapeController = new ShapeController();
-    public enum Shapes
-    {
-        Sphere,
-        Cube,
-        Triangle,
-        Star
-    }
+    private ShapeController _shapeController;
 
     [SerializeField]
-    private Shapes _currentShape = Shapes.Sphere;
+    private GameManager.Shapes _currentShape = GameManager.Shapes.Sphere;
 
     private void Awake()
     {
-        
+        _currentShape = GameManager.Shapes.Sphere;
+        _shapeController = new SphereController();
+        _shapeController.InitializeForm(gameObject.transform);
     }
     
 	// Use this for initialization
@@ -27,30 +22,52 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	private void Update ()
-    {
-	    if(Input.GetKeyDown(KeyCode.Alpha1) && _currentShape != Shapes.Sphere)
+	{
+	    Vector3 shapeVelocity = _shapeController.GetShapeVelocity();
+
+	    if(Input.GetKeyDown(KeyCode.Alpha1) && _currentShape != GameManager.Shapes.Sphere)
         {
+            _shapeController.DisableForm();
+
             _shapeController = new SphereController();
-            transform.GetChild(0).gameObject.SetActive(false);
+            _shapeController.InitializeForm(gameObject.transform);
+            _shapeController.SetShapeVelocity(shapeVelocity);
 
-            GameObject playerCube = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
-            _currentShape = Shapes.Sphere;
+            _currentShape = GameManager.Shapes.Sphere;
         }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2) && _currentShape != Shapes.Cube)
+        else if(Input.GetKeyDown(KeyCode.Alpha2) && _currentShape != GameManager.Shapes.Cube)
         {
-            Vector3 playerPosition = transform.GetChild(0).position;
-            //_shapeController = new SphereController();
-            transform.GetChild(0).gameObject.SetActive(false);
+            _shapeController.DisableForm();
+
+            _shapeController = new CubeController();
+            _shapeController.InitializeForm(gameObject.transform);
             
-            GameObject playerCube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                //Resources.Load(@"Assets\Prefabs\Shape Prefabs\Square"), playerPosition, new Quaternion()) as GameObject;
-            playerCube.transform.parent = this.transform;
-            playerCube.transform.position = playerPosition;
-            
-            _currentShape = Shapes.Cube;
+            _currentShape = GameManager.Shapes.Cube;
         }
+        else if(Input.GetKeyDown(KeyCode.Alpha3) && _currentShape != GameManager.Shapes.Triangle)
+        {
+            _shapeController.DisableForm();
+
+            _shapeController = new TriangleController();
+            _shapeController.InitializeForm(gameObject.transform);
+
+            _currentShape = GameManager.Shapes.Triangle;
+        }
+
+        else if(Input.GetKeyDown(KeyCode.Alpha4) && _currentShape != GameManager.Shapes.Star)
+        {
+            _shapeController.DisableForm();
+
+            _shapeController = new StarController();
+            _shapeController.InitializeForm(gameObject.transform);
+            _shapeController.SetShapeVelocity(shapeVelocity);
+
+            _currentShape = GameManager.Shapes.Star;
+        }
+
+	    gameObject.transform.position = _shapeController.GetShapePosition();
+
+        FormUpdate();
 	}
 
     private void FixedUpdate()

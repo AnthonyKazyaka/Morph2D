@@ -2,7 +2,11 @@ fileFormatVersion: 2
 guid: c09cc4c2cc8699041a953394bd97a1ea
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _spherePrefab: {fileID: 100000, guid: 5c7cfee72d01413499a829b1cb684986, type: 2}
+  - _trianglePrefab: {fileID: 100000, guid: 842a3eacec8fce7418f4d7e32d8ec86a, type: 2}
+  - _cubePrefab: {fileID: 100000, guid: 7f9fcccaf92e97044927a52238c524d1, type: 2}
+  - _starPrefab: {fileID: 100000, guid: e56c7c90f039b744a99a6ce2a85b9118, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
