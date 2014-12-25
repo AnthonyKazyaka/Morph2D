@@ -8,14 +8,21 @@ public class CubeController : ShapeController {
 
     public GameObject Cube { get { return _shapeGameObject; } }
 
-    public override void InitializeForm(Transform parent)
+    protected override void InitializeForm(Transform playerTransform)
     {
         _shapeGameObject = GameManager.Instance.InstantiateShape(GameManager.Shapes.Cube);
-        _shapeGameObject.transform.position = parent.position;
+        _shapeGameObject.transform.position = playerTransform.position;
+    }
+
+    public override void InitializeFormWithVelocity(Transform playerTransform, Vector3 velocity)
+    {
+        InitializeForm(playerTransform);
+
+        SetShapeVelocity(velocity);
 
         //int directionModifier = (Input.GetAxis("Horizontal") >= 0) ? 1 : -1;
-
         _shapeGameObject.rigidbody.AddForce((Vector3.right) * ForwardDashForce, ForceMode.Impulse); // * directionModifier
+
     }
 
     public override void DisableForm()

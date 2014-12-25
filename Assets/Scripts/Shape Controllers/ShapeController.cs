@@ -7,7 +7,9 @@ public class ShapeController
 
     protected GameObject _shapeGameObject;
 
-    public virtual void InitializeForm(Transform parent) { }
+    protected virtual void InitializeForm(Transform playerTransform) { }
+
+    public virtual void InitializeFormWithVelocity(Transform playerTransform, Vector3 velocity) { }
 
     public virtual void DisableForm() { }
 
@@ -23,7 +25,7 @@ public class ShapeController
         return _shapeGameObject.rigidbody.velocity;
     }
 
-    public void SetShapeVelocity(Vector3 velocity)
+    public virtual void SetShapeVelocity(Vector3 velocity)
     {
         _shapeGameObject.rigidbody.velocity = velocity;
     }

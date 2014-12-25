@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Net.Configuration;
+using UnityEngine;
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
@@ -7,6 +8,9 @@ public class GameManager : MonoBehaviour {
     // Our GameManager
     private static GameManager _instance;
     public static GameManager Instance { get { return _instance; } }
+
+    private bool _isPaused = false;
+    public bool IsPaused { get { return _isPaused; } private set { _isPaused = value; }}
 
     [SerializeField]
     private GameObject _spherePrefab;
@@ -86,5 +90,15 @@ public class GameManager : MonoBehaviour {
     public void DestroyShape(GameObject shapeObject)
     {
         Destroy(shapeObject);
+    }
+
+    public void PauseGame()
+    {
+        IsPaused = true;
+    }
+
+    public void UnpauseGame()
+    {
+        IsPaused = false;
     }
 }

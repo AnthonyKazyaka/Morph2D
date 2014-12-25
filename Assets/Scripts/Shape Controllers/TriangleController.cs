@@ -8,10 +8,18 @@ public class TriangleController : ShapeController
 
     public GameObject Triangle { get { return _shapeGameObject; } }
 
-    public override void InitializeForm(Transform parent)
+    protected override void InitializeForm(Transform playerTransform)
     {
         _shapeGameObject = GameManager.Instance.InstantiateShape(GameManager.Shapes.Triangle);
-        _shapeGameObject.transform.position = parent.position;
+        _shapeGameObject.transform.position = playerTransform.position;
+    }
+
+    public override void InitializeFormWithVelocity(Transform playerTransform, Vector3 velocity)
+    {
+        InitializeForm(playerTransform);
+
+        SetShapeVelocity(velocity);
+
         _shapeGameObject.rigidbody.AddForce((Vector3.up) * UpwardDashForce, ForceMode.Impulse);
     }
 
@@ -24,4 +32,5 @@ public class TriangleController : ShapeController
     {
         // We don't want anything to happen continuously for this shape
     }
+
 }

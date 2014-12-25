@@ -10,11 +10,18 @@ public class SphereController : ShapeController {
 
     public GameObject Sphere { get { return _shapeGameObject; } }
 
-    public override void InitializeForm(Transform parent)
+    protected override void InitializeForm(Transform playerTransform)
     {
         _shapeGameObject = GameManager.Instance.InstantiateShape(GameManager.Shapes.Sphere);
         _shapeGameObject.rigidbody.maxAngularVelocity = MaxRotationalSpeed;
-        _shapeGameObject.transform.position = parent.position;
+        _shapeGameObject.transform.position = playerTransform.position;
+    }
+
+    public override void InitializeFormWithVelocity(Transform playerTransform, Vector3 velocity)
+    {
+        InitializeForm(playerTransform);
+
+        SetShapeVelocity(velocity);
     }
 
     public override void DisableForm()
