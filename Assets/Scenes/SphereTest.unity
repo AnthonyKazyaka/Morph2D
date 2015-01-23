@@ -297,6 +297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentShape: 0
+  _canChangeShape: 1
+  _shapeChangeDisableTimer: .5
 --- !u!4 &1330079859
 Transform:
   m_ObjectHideFlags: 0
