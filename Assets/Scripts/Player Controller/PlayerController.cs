@@ -19,6 +19,10 @@ public class PlayerController : MonoBehaviour {
     private float _shapeChangeDisableTimer = 0.50f;
     public float ShapeChangeDisableTimer { get { return _shapeChangeDisableTimer; } }
 
+    [SerializeField]
+    private int _coinsCollected = 0;
+    public int CoinsCollected { get { return _coinsCollected; } set { _coinsCollected = value; } }
+
 
     private void Awake()
     {
@@ -150,5 +154,12 @@ public class PlayerController : MonoBehaviour {
         _shapeController.InitializeFormWithVelocity(gameObject.transform, _shapeVelocity);
 
         _currentShape = GameManager.Shapes.Star;
+    }
+
+
+
+    public void CollectCoin()
+    {
+        CoinsCollected++;
     }
 }

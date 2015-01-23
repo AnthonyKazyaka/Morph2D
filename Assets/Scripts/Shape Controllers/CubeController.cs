@@ -20,8 +20,8 @@ public class CubeController : ShapeController {
 
         SetShapeVelocity(velocity);
 
-        //int directionModifier = (Input.GetAxis("Horizontal") >= 0) ? 1 : -1;
-        _shapeGameObject.rigidbody.AddForce((Vector3.right) * ForwardDashForce, ForceMode.Impulse); // * directionModifier
+        int directionModifier = (Input.GetAxis("Horizontal") >= 0) ? 1 : -1;
+        _shapeGameObject.rigidbody.AddForce((Vector3.right) * ForwardDashForce * directionModifier, ForceMode.Impulse);
 
     }
 

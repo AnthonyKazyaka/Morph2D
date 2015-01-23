@@ -28,6 +28,10 @@ public class GameManager : MonoBehaviour {
     private GameObject _starPrefab;
     public GameObject StarPrefab { get { return _starPrefab; } }
 
+    [SerializeField]
+    private PlayerController _playerController;
+    public PlayerController PlayerController { get { return _playerController; } set { _playerController = value; } }
+
     public enum Shapes
     {
         Sphere,
@@ -90,6 +94,11 @@ public class GameManager : MonoBehaviour {
     public void DestroyShape(GameObject shapeObject)
     {
         Destroy(shapeObject);
+    }
+
+    public void DestroyCollectible(GameObject collectible)
+    {
+        Destroy(collectible);
     }
 
     public void PauseGame()
