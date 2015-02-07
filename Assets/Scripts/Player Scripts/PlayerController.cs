@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Awake()
     {
-        
+        this.gameObject.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
     }
     
 	// Use this for initialization

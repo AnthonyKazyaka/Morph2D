@@ -8,6 +8,6 @@ public class Coin : Collectible
     {
         base.Collect();
         GameManager.Instance.PlayerController.CollectCoin();
-        GameManager.Instance.DestroyCollectible(this.gameObject);
+        this.gameObject.SetActive(false);
     }
 }
