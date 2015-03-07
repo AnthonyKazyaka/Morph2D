@@ -19,50 +19,73 @@ public class PlayerController : MonoBehaviour {
     private float _shapeChangeDisableTimer = 0.50f;
     public float ShapeChangeDisableTimer { get { return _shapeChangeDisableTimer; } }
 
-    [SerializeField]
-    private int _coinsCollected = 0;
-    public int CoinsCollected { get { return _coinsCollected; } set { _coinsCollected = value; } }
+    private bool _hasMoved = false;
+    public bool HasMoved { get { return _hasMoved; } set { _hasMoved = value; } }
 
 
     private void Awake()
     {
-        this.gameObject.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        SpawnPlayer();
     }
     
 	// Use this for initialization
 	void Start () 
     {
-        CreateSphere();
+        InitializePlayer();
 	}
 	
 	// Update is called once per frame
 	private void Update ()
 	{
-	    if (CanChangeShape)
-	    {
-            _shapeVelocity = _shapeController.GetShapeVelocity();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!GameManager.Instance.IsPaused)
+            {
+                Pause();
+            }
+            else
+            {
+                Unpause();
+            }
+        }
 
-	        if (Input.GetKeyDown(KeyCode.Alpha1) && _currentShape != GameManager.Shapes.Sphere)
-	        {
-	            ChangePlayerShape(GameManager.Shapes.Sphere);
-	        }
-	        else if (Input.GetKeyDown(KeyCode.Alpha2) && _currentShape != GameManager.Shapes.Cube)
-	        {
-	            ChangePlayerShape(GameManager.Shapes.Cube);
-	        }
-	        else if (Input.GetKeyDown(KeyCode.Alpha3) && _currentShape != GameManager.Shapes.Triangle)
-	        {
-                ChangePlayerShape(GameManager.Shapes.Triangle);	            
-	        }
-	        else if (Input.GetKeyDown(KeyCode.Alpha4) && _currentShape != GameManager.Shapes.Star)
-	        {
-                ChangePlayerShape(GameManager.Shapes.Star);	            
-	        }
-	    }
+        if (!GameManager.Instance.IsPaused)
+        {
+            if (Input.GetKeyDown(KeyCode.Backspace))
+            {
+                ResetPlayer();
+            }
+            else if (Input.anyKeyDown)
+            {
+                HasMoved = true;
+            }
 
-	    gameObject.transform.position = _shapeController.GetShapePosition();
+            if (CanChangeShape)
+            {
+                _shapeVelocity = _shapeController.GetShapeVelocity();
 
-        FormUpdate();
+                if (Input.GetKeyDown(KeyCode.Alpha1) && _currentShape != GameManager.Shapes.Sphere)
+                {
+                    ChangePlayerShape(GameManager.Shapes.Sphere);
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha2) && _currentShape != GameManager.Shapes.Cube)
+                {
+                    ChangePlayerShape(GameManager.Shapes.Cube);
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha3) && _currentShape != GameManager.Shapes.Triangle)
+                {
+                    ChangePlayerShape(GameManager.Shapes.Triangle);
+                }
+                else if (Input.GetKeyDown(KeyCode.Alpha4) && _currentShape != GameManager.Shapes.Star)
+                {
+                    ChangePlayerShape(GameManager.Shapes.Star);
+                }
+            }
+
+            gameObject.transform.position = _shapeController.GetShapePosition();
+
+            FormUpdate();
+        }
 	}
 
     private void FixedUpdate()
@@ -156,10 +179,41 @@ public class PlayerController : MonoBehaviour {
         _currentShape = GameManager.Shapes.Star;
     }
 
-
-
-    public void CollectCoin()
+    public void Pause()
     {
-        CoinsCollected++;
+        _shapeController.PauseShape();
+        GameManager.Instance.PauseGame();
     }
+
+    public void Unpause()
+    {
+        _shapeController.UnpauseShape();
+        GameManager.Instance.UnpauseGame();
+    }
+
+    private void ResetPlayer()
+    {
+        SpawnPlayer();
+        GameManager.Instance.ResetLevel();
+
+        InitializePlayer();
+    }
+
+    private void SpawnPlayer()
+    {
+        gameObject.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+    }
+
+    private void InitializePlayer()
+    {
+        ChangePlayerShape(GameManager.Shapes.Sphere);
+        _shapeController.SetShapeVelocity(Vector3.zero);
+        _shapeController.SetShapeAngularVelocity(Vector3.zero);
+        _shapeVelocity = Vector3.zero;
+        _shapeChangeDisableTimer = 0.0f;
+        
+        CanChangeShape = true;
+        HasMoved = false;
+    }
+
 }
