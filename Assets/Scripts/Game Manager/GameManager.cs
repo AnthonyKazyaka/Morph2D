@@ -32,6 +32,10 @@ public class GameManager : MonoBehaviour {
     private PlayerController _playerController;
     public PlayerController PlayerController { get { return _playerController; } set { _playerController = value; } }
 
+    [SerializeField]
+    private Level _currentLevel;
+    public Level CurrentLevel { get { return _currentLevel; } set { _currentLevel = value; } }
+
     public enum Shapes
     {
         Sphere,
@@ -56,8 +60,8 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	private void Start ()
     {
-	
-	}
+
+    }
 	
 	// Update is called once per frame
 	private void Update ()
@@ -109,5 +113,10 @@ public class GameManager : MonoBehaviour {
     public void UnpauseGame()
     {
         IsPaused = false;
+    }
+
+    public void ResetLevel()
+    {
+        CurrentLevel.Reset();
     }
 }
