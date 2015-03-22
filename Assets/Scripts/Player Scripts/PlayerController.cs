@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Awake()
     {
-        this.gameObject.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+        SpawnPlayer();
     }
     
 	// Use this for initialization
@@ -38,6 +38,11 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	private void Update ()
 	{
+	    if (Input.GetKeyDown(KeyCode.Backspace))
+	    {
+	        
+	    }
+
 	    if (CanChangeShape)
 	    {
             _shapeVelocity = _shapeController.GetShapeVelocity();
@@ -156,7 +161,21 @@ public class PlayerController : MonoBehaviour {
         _currentShape = GameManager.Shapes.Star;
     }
 
+    public void Respawn()
+    {
+        SpawnPlayer();
+        ResetLevel();
+    }
 
+    private void SpawnPlayer()
+    {
+        this.gameObject.transform.position = GameObject.FindGameObjectWithTag("Respawn").transform.position;
+    }
+
+    private void ResetLevel()
+    {
+        
+    }
 
     public void CollectCoin()
     {

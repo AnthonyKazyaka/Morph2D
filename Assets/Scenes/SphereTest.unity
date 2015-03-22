@@ -280,7 +280,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
 --- !u!1 &397976382
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,8 +316,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &397976384
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -349,7 +349,6 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
 --- !u!1 &448492271
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,8 +385,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &448492273
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -418,7 +418,6 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
 --- !u!1001 &494501430
 Prefab:
   m_ObjectHideFlags: 0
@@ -481,7 +480,7 @@ GameObject:
   - 114: {fileID: 497339251}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,8 +516,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &497339253
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -552,7 +552,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
 --- !u!1 &541278650
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +566,7 @@ GameObject:
   - 114: {fileID: 541278651}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -603,8 +602,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &541278653
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -638,7 +638,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
 --- !u!1 &548561321
 GameObject:
   m_ObjectHideFlags: 0
@@ -689,8 +688,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &548561324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -723,7 +723,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
 --- !u!1 &551665909
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,7 +763,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
 --- !u!1 &600339652
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,7 +777,7 @@ GameObject:
   - 114: {fileID: 600339653}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,8 +813,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &600339655
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -850,7 +849,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
 --- !u!1001 &747228569
 Prefab:
   m_ObjectHideFlags: 0
@@ -917,7 +915,7 @@ GameObject:
   - 114: {fileID: 762693926}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -953,8 +951,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &762693928
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -988,7 +987,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
 --- !u!1001 &783717656
 Prefab:
   m_ObjectHideFlags: 0
@@ -1107,7 +1105,7 @@ GameObject:
   - 114: {fileID: 1034745839}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1143,8 +1141,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &1034745841
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1178,7 +1177,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
 --- !u!1 &1075688758
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,7 +1191,7 @@ GameObject:
   - 114: {fileID: 1075688759}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1229,8 +1227,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &1075688761
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1264,7 +1263,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
 --- !u!1001 &1095047882
 Prefab:
   m_ObjectHideFlags: 0
@@ -1387,7 +1385,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
 --- !u!1 &1134715014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,7 +1399,7 @@ GameObject:
   - 114: {fileID: 1134715015}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1438,8 +1435,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &1134715017
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1473,7 +1471,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
 --- !u!1001 &1219042408
 Prefab:
   m_ObjectHideFlags: 0
@@ -1562,8 +1559,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1228470839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1594,7 +1592,6 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
 --- !u!1 &1292362537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,11 +1659,8 @@ Camera:
     m_Bits: 4294967295
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
-  m_TargetDisplay: 0
   m_HDR: 0
   m_OcclusionCulling: 1
-  m_StereoConvergence: 10
-  m_StereoSeparation: .0219999999
 --- !u!4 &1292362542
 Transform:
   m_ObjectHideFlags: 0
@@ -1678,7 +1672,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1330079859}
-  m_RootOrder: 0
 --- !u!1 &1330079857
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,7 +1716,6 @@ Transform:
   m_Children:
   - {fileID: 1292362542}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
 --- !u!1 &1330115763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,8 +1752,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1330115765
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1792,7 +1785,6 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!1 &1378412519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1838,7 +1830,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
 --- !u!114 &1378412522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2080,8 +2071,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1624445032
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2112,7 +2104,6 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
 --- !u!1 &1787319193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2149,8 +2140,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &1787319195
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2181,7 +2173,6 @@ Transform:
   m_LocalScale: {x: 7.45860052, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!1001 &1810913231
 Prefab:
   m_ObjectHideFlags: 0
@@ -2244,7 +2235,7 @@ GameObject:
   - 114: {fileID: 1885453186}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2280,8 +2271,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &1885453188
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2315,7 +2307,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
 --- !u!1001 &1891367311
 Prefab:
   m_ObjectHideFlags: 0
@@ -2378,7 +2369,7 @@ GameObject:
   - 114: {fileID: 1898955099}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2414,8 +2405,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &1898955101
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2449,7 +2441,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
 --- !u!1 &1952320633
 GameObject:
   m_ObjectHideFlags: 0
@@ -2464,7 +2455,7 @@ GameObject:
   - 114: {fileID: 1952320634}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2500,8 +2491,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &1952320636
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2535,7 +2527,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
 --- !u!1 &1964389957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2550,7 +2541,7 @@ GameObject:
   - 114: {fileID: 1964389958}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2586,8 +2577,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &1964389960
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2621,7 +2613,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
 --- !u!1001 &2059198543
 Prefab:
   m_ObjectHideFlags: 0
@@ -2688,7 +2679,7 @@ GameObject:
   - 114: {fileID: 2062119455}
   m_Layer: 0
   m_Name: Coin
-  m_TagString: Untagged
+  m_TagString: Collectible
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2724,8 +2715,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!136 &2062119457
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2759,7 +2751,6 @@ Transform:
   m_LocalScale: {x: 1, y: .100000001, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
 --- !u!1 &2099935139
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,8 +2787,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &2099935141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2828,7 +2820,6 @@ Transform:
   m_LocalScale: {x: 20, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
 --- !u!1 &2146869754
 GameObject:
   m_ObjectHideFlags: 0
@@ -2865,8 +2856,9 @@ Renderer:
   m_UseLightProbes: 0
   m_LightProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
+  m_SortingLayerID: 0
 --- !u!65 &2146869756
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2897,4 +2889,3 @@ Transform:
   m_LocalScale: {x: 10.2500248, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15

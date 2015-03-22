@@ -27,7 +27,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -39,6 +38,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1abb6c960d76bdd44b56383f557cc3bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _currentShape: 0
+  _canChangeShape: 1
+  _shapeChangeDisableTimer: .100000001
+  _coinsCollected: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
