@@ -6,12 +6,11 @@ public class StarController : ShapeController
     private float _verticalVeloctiyModifier = 0.90f;
     public float VerticalVelocityModifier { get { return _verticalVeloctiyModifier; } }
 
-    private float _horizontalSpeed = 0.0f;
-    public float HorizontalSpeed { get { return _horizontalSpeed; } private set { _horizontalSpeed = value; } }
+    public float HorizontalSpeed { get { return _shapeGameObject.rigidbody.velocity.x; } }
 
-    private float _horizontalSpeedModifier = 10.0f;
+    private float _horizontalSpeedModifier = 200.0f;
 
-    public const float MaxHorizontalSpeed = 10.0f;
+    public const float MaxHorizontalSpeed = 15.0f;
 
     public GameObject Star { get { return _shapeGameObject; } }
 
@@ -39,11 +38,10 @@ public class StarController : ShapeController
         modifiedVelocity.y *= _verticalVeloctiyModifier;
         _shapeGameObject.rigidbody.velocity = modifiedVelocity;
 
-        HorizontalSpeed += _horizontalSpeedModifier * Input.GetAxis("Horizontal") * Time.deltaTime;
-        if (HorizontalSpeed > MaxHorizontalSpeed)
-            HorizontalSpeed = MaxHorizontalSpeed;
-
-        Vector3 movePosition = _shapeGameObject.rigidbody.transform.position + Vector3.right * HorizontalSpeed * Time.deltaTime;
-        _shapeGameObject.rigidbody.MovePosition(movePosition);
+ 
+        Vector3 forceVector = new Vector3(_horizontalSpeedModifier * Input.GetAxis("Horizontal") * Time.deltaTime, 0.0f, 0.0f);
+        _shapeGameObject.rigidbody.AddForce(forceVector, ForceMode.Acceleration);
+        if (_shapeGameObject.rigidbody.velocity.x > MaxHorizontalSpeed)
+            _shapeGameObject.rigidbody.velocity = new Vector3(MaxHorizontalSpeed, _shapeGameObject.rigidbody.velocity.y, _shapeGameObject.rigidbody.velocity.z);
     }
 }

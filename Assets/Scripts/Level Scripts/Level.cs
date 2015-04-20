@@ -20,8 +20,6 @@ public class Level : MonoBehaviour {
     private int _playerScore = 0;
     public int PlayerScore { get { return _playerScore; } set { _playerScore = value; } }
 
-    private bool _playerHasMoved = false;
-
     [SerializeField]
     private int _coinsCollected = 0;
     public int CoinsCollected { get { return _coinsCollected; } set { _coinsCollected = value; } }
@@ -30,6 +28,9 @@ public class Level : MonoBehaviour {
     private List<GameObject> _inactiveGameObjects = new List<GameObject>();
     public List<GameObject> InactiveGameObjects { get { return _inactiveGameObjects; } set { _inactiveGameObjects = value; } }
 
+    [SerializeField]
+    private bool _hasFinishedLevel = false;
+    public bool HasFinishedLevel { get { return _hasFinishedLevel; } set { _hasFinishedLevel = value; } }
 
 	// Use this for initialization
 	void Start () 
@@ -40,7 +41,7 @@ public class Level : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
     {
-        if (_playerHasMoved)
+        if (!HasFinishedLevel && GameManager.Instance.PlayerController.HasMoved)
         {
             ElapsedLevelTime += Time.deltaTime;
         }
@@ -58,7 +59,8 @@ public class Level : MonoBehaviour {
 
     public void FinishLevel()
     {
-
+        HasFinishedLevel = true;
+        // CalculateScore();
     }
 
     public void CalculateScore()
@@ -73,7 +75,6 @@ public class Level : MonoBehaviour {
 
     public void Reset()
     {
-        _playerHasMoved = false;
         ElapsedLevelTime = 0.0f;
         CoinsCollected = 0;
 

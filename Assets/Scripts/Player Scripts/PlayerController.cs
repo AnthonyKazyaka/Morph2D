@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour {
             {
                 ResetPlayer();
             }
-            else if (Input.anyKeyDown)
+            else if (!HasMoved && IsMovementKeyPressed())
             {
                 HasMoved = true;
             }
@@ -215,5 +215,16 @@ public class PlayerController : MonoBehaviour {
         CanChangeShape = true;
         HasMoved = false;
     }
+
+    private bool IsMovementKeyPressed()
+    {
+        if(Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2) || Input.GetKeyDown(KeyCode.Alpha3) || Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            return true;
+        }
+        
+        return false;
+    }
+
 
 }
